@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="shortcut icon" href="../static/img/logo.png" type="image/x-icon">
+    <title>Gnerate QR</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../static/img/logo.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+                ALFA.
+            </a>
+        </div>
+    </nav>
+    <div class="body">
+        <h1>Welcome To <span>ALFA.</span></h1>
+        <form method="post">
+            <label for="nama">Nama</label>
+            <input class="form-control" type="text" name="nama" required><br>
+            <label for="kelas">Mata Kuliah</label>
+            <select class="form-control" name="kelas" required>
+                <option value="data scraping">Pilih Kelas</option>
+                <option value="SP3.1 Dasar Pemrograman Backend">SP3.1 Dasar Pemrograman Backend</option>
+                <option value="SP3.1-SM3.1 Statistik">SP3.1-SM3.1 Statistik</option>
+                <option value="SP3.1-SM3.1 Bahasa Indonesia">SP3.1-SM3.1 Bahasa Indonesia</option>
+                <option value="SP3.1-SM3.1 Agama">SP3.1-SM3.1 Agama</option>
+                <option value="SP3.2 Praktikum Pemrograman Berbasis Jaringan">SP3.2 Praktikum Pemrograman Berbasis
+                    Jaringan</option>
+                <option value="SP3.1 Etika Profesi">SP3.1 Etika Profesi</option>
+                <option value="SP3.2 Data Scraping">SP3.2 Data Scraping</option>
+                <option value="SP3.2 Dasar Pemrograman Frontend">SP3.2 Dasar Pemrograman Frontend</option>
+            </select><br>
+            <input data-toggle="modal" data-target="#form" class="btn btn-success" type="submit"
+                value="Generate QR Code">
+        </form>
+        <br>
+        <!--  -->
+        <div class="modalqr">
+            <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content  py-md-5 px-md-4 p-sm-3 p-4">
+                        <img class="form-control me-2" src="{{ url_for('static', filename='qrcode.png') }}"
+                            alt="QR Code">
+                        <p>Scan Me</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="qr-data" class="pembungkus form-control me-2">
+            <h5>Data Anda</h5>
+            <div class="data-qr">
+                <ul>
+                    <p>{{ qr_data.nama }}</p>
+                </ul>
+                <ul>
+                    <p>{{ qr_data.kelas }}</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

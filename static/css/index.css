@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.start{
+    width: 100%;
+}
+
+#reader {
+    width: 600px;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+#result {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tabel{
+    background-color: #113946;
+    color: #fff;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.pembungkus{
+    padding: 10px;
+}
+
+.data-qr{
+    display: flex;
+    gap: 30px;
+}
+
+
+.body{
+    padding: 50px;
+    height: 90vh;
+    align-items: center;
+}
+
+.scan{
+    padding: 50px;
+}
+
+
+.navbar{
+    background-color: #113946;
+    height: 60px;
+}
+
+.navbar a{
+    color: #fff;
+    font-weight: bold;
+}
+
+.text{
+    width: 33%;
+    padding-top: 10%;
+}
+
+.text h1{
+    font-size: 50px;
+}
+
+.text span{
+    color: #41B3A3;
+    font-family: 'Nosifer', sans-serif;
+}
+
+
+#hasil_scan{
+    margin-top: 40px;
+}
+
+#text-hasil{
+    text-decoration: none;
+}
+
+
+/* #notification{
+    width: 100%;
+    height: 60px;
+    background-color: #11394636;
+    color: #fff;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+
+@media only screen and (max-width: 720px) {
+    .text{
+        width: 100%;
+    }
+    
+    .scan{
+        padding: 20px;
+    }
+
+    .body{
+        padding: 20px;
+    }
+
+    #reader{
+        width: 100%;
+    }
+}

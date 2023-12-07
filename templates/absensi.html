@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Absensi</title>
+</head>
+<body>
+    {% block body %}
+    <h1>Halaman Absensi</h1>
+    <form action="/absensi" method="post">
+        Nama: <input type="text" name="nama">
+        <input type="submit" value="Kirim">
+    </form>
+    {% for item in data_absen %}
+        <h4> Date: {{ item['date'] }}</h4>
+        <ul>
+            {% for siswa in item['data_absensi'] %}
+                <li>{{ siswa }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>
